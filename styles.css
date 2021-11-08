@@ -1,0 +1,335 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Space Mono', monospace;
+    background: hsl(185, 41%, 84%);
+    text-align: center;
+}
+
+.input:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+/* *************** top-container ****************** */
+
+.top-container{
+    color: hsl(186, 14%, 43%);
+    margin: 3rem 0 2rem;
+    letter-spacing: 1rem;   
+}
+
+.top-container h1{
+    font-size: 26px;
+    font-weight: 700;
+}
+
+/* *************** bottom-container ************** */
+
+.bottom-container{
+    background-color: white;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+    padding-bottom: 2rem;
+}
+
+/* ***************** bill area *********************** */
+
+.bottom-container .bill-area{
+    text-align: left;
+    padding: 2rem;
+    font-size: 16px;
+}
+
+.bottom-container .bill-area label{
+    display: block;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+.bottom-container .bill-area .amt{
+    text-align: right;
+    font-size: 20px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    width: 98%;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    padding: 10px;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+
+.bottom-container .bill-area .amt:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.bottom-container .dollar-icon{
+    position: absolute;
+    top: 14.4rem;
+    left: 3rem;
+}
+
+.bottom-container .dollar-icon img{
+    width: 15px;
+}
+
+/* ******************* tip selection ***************** */
+
+.bottom-container .tip-container{
+    text-align: left;
+    padding: 0 2rem 0.5rem;
+    font-size: 16px;
+}
+
+.bottom-container .tip-container label{
+    display: block;
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+.bottom-container .tip-container .buttons{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+}
+
+
+.btn-1, .btn-2, .btn-3, .btn-4, .btn-5, .custom{
+    width: 90%;
+    margin-top: 1rem;
+    padding: 15px 0;
+    font-size: 20px;
+    background: hsl(183, 100%, 15%);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn-1, .btn-2{
+    margin-top: 0.2rem;
+}
+
+.custom{
+    text-align: right;
+    background-color: hsl(185, 41%, 84%);
+    color: hsl(183, 100%, 15%);
+    padding: 15px;
+}
+
+.custom::placeholder{
+    text-align: center;
+    color: hsl(186, 14%, 43%);
+}
+
+.btn-1:hover, .btn-2:hover, .btn-3:hover, .btn-4:hover, .btn-5:hover{
+    cursor: pointer;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+.btn-1:active, .btn-2:active, .btn-3:active, .btn-4:active, .btn-5:active{
+    transform: scale(0.95);
+}
+
+/* ***************** number of people ****************** */
+
+.people-count{
+    text-align: left;
+    padding: 0 2rem 0.5rem;
+    font-size: 16px;
+}
+
+.people-count label{
+    margin: 1rem 0;
+    display: block;
+    font-weight: 700;
+    color: hsl(186, 14%, 43%);
+}
+
+.label-p-divide{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 10px;
+}
+
+.error{
+    visibility: hidden;
+    color: red;
+    font-size: 14px;
+}
+
+.bottom-container .people-count input{
+    text-align: right;
+    font-size: 20px;
+    background-color: hsl(189, 41%, 97%);
+    border: none;
+    width: 98%;
+    border-radius: 5px;
+    color: hsl(183, 100%, 15%);
+    padding: 10px;
+    padding-right: 1rem;
+    font-weight: 700;
+}
+
+.bottom-container .people-count input:focus{
+    outline: none;
+    border: 2px solid hsl(172, 67%, 45%);
+}
+
+.bottom-container .person-icon{
+    position: absolute;
+    top: 37.3rem;
+    left: 3rem;
+}
+
+.bottom-container .person-icon img{
+    width: 15px;
+}
+
+/* ****************** Calculation Area *************** */
+
+.bottom-container .calculation{
+    background: hsl(183, 100%, 15%);
+    margin: 2rem;
+    border-radius: 20px;
+    padding: 2rem 1rem;
+}
+
+.bottom-container .calculation .amount{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.bottom-container .calculation .total{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+}
+
+.tip-amt, .total-amt{
+    text-align: left;
+    color: white;
+    font-weight: 700;
+}
+
+.per-person{
+    text-align: left;
+    color: hsl(184, 14%, 56%);
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.calculation input{
+    border: none;
+    background: hsl(183, 100%, 15%);
+    font-size: 22px;
+    text-align: right;
+    color: hsl(172, 67%, 45%);
+    font-weight: 700;
+    width: 100px;
+    margin-left: 30%;
+}
+
+.btn-reset{
+    margin-top: 2rem;
+}
+
+.btn-reset button{
+    width: 97%;
+    padding: 1rem;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    color: hsl(183, 100%, 15%);
+    font-weight: 700;
+    background-color: hsl(172, 67%, 45%);
+}
+
+.btn-reset button:hover{
+    background: hsl(172, 100%, 84%);
+    cursor: pointer;
+}
+
+/* ************************* mobile design *************************** */
+
+@media (max-width: 490px) {
+    
+    .tip-amt, .total-amt{
+        font-size: 14px;
+    }
+
+}
+
+/* ************************ desktop design *********************** */
+
+@media (min-width: 1200px) {
+    
+    .bottom-container{
+        max-width: 1000px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 50% 50%;
+        border-radius: 20px;
+        padding-bottom: 0;
+    }
+
+    .bottom-container .bill-area{
+        padding-bottom: 0rem;
+    }
+
+    .bottom-container .tip-container{
+        padding-top: 0rem;
+    }
+
+    .bottom-container .calculation .amount{
+        margin-top: 1rem;
+    }
+
+    .bottom-container .tip-container .buttons{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .btn-reset{
+        margin-top: 7.5rem;
+    }
+
+    .btn-3{
+        margin-top: 0.2rem;
+    }
+
+    .bottom-container .dollar-icon{
+        position: relative;
+        display: inline-block;
+        top: -2rem;
+        left: 1rem;
+    }
+
+    .bottom-container .person-icon{
+        position: relative;
+        display: inline-block;
+        top: -2rem;
+        left: 1rem;
+    }
+
+    .btn-reset:active{
+        transform: scale(0.95);
+    }
+
+}
